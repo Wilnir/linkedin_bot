@@ -5,16 +5,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 
-service = Service("/usr/local/bin/chromedriver")
+service = Service("/usr/local/")
 driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
 driver.get("https://www.linkedin.com/login?fromSignIn=true&session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fjobs&trk="
            "guest_homepage-jobseeker_nav-header-signin")
 user_id = driver.find_element(By.ID, "username")
-user_id.send_keys("wilnir@hotmail.com")
+user_id.send_keys("")
 password = driver.find_element(By.ID, "password")
-password.send_keys("NOSSAdiarreia-138")
+password.send_keys("")
 password.send_keys(Keys.ENTER)
 
 time.sleep(20)
